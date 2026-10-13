@@ -1,0 +1,29 @@
+{
+  "name": "query-lens",
+  "version": "1.0.0",
+  "description": "Zero-dependency SQL Execution Plan Analyzer, Visual Tree Heatmap & Automated Index Heuristic Advisor",
+  "main": "lib/index.js",
+  "bin": {
+    "query-lens": "./bin/query-lens.js"
+  },
+  "scripts": {
+    "test": "node test/run-tests.js",
+    "demo": "node bin/query-lens.js examples/postgres-slow-query.json"
+  },
+  "keywords": [
+    "sql",
+    "explain-analyze",
+    "execution-plan",
+    "index-advisor",
+    "performance-tuning",
+    "postgresql",
+    "mysql",
+    "sql-server",
+    "dev-tools"
+  ],
+  "author": "Kevin Naserwan <kevinnaserwan@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}

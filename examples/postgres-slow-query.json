@@ -1,0 +1,53 @@
+[
+  {
+    "Plan": {
+      "Node Type": "Hash Join",
+      "Parallel Aware": false,
+      "Join Type": "Inner",
+      "Startup Cost": 1240.50,
+      "Total Cost": 8450.25,
+      "Plan Rows": 450,
+      "Actual Rows": 420,
+      "Actual Total Time": 142.35,
+      "Hash Cond": "(orders.user_id = users.id)",
+      "Plans": [
+        {
+          "Node Type": "Seq Scan",
+          "Parent Relationship": "Outer",
+          "Relation Name": "orders",
+          "Alias": "orders",
+          "Startup Cost": 0.00,
+          "Total Cost": 6890.00,
+          "Plan Rows": 15000,
+          "Actual Rows": 14850,
+          "Actual Total Time": 85.12,
+          "Filter": "(status = 'PENDING')",
+          "Rows Removed by Filter": 85150
+        },
+        {
+          "Node Type": "Hash",
+          "Parent Relationship": "Inner",
+          "Startup Cost": 820.00,
+          "Total Cost": 820.00,
+          "Plan Rows": 2500,
+          "Actual Rows": 2500,
+          "Actual Total Time": 12.40,
+          "Plans": [
+            {
+              "Node Type": "Index Scan",
+              "Parent Relationship": "Outer",
+              "Relation Name": "users",
+              "Alias": "users",
+              "Index Name": "users_pkey",
+              "Startup Cost": 0.28,
+              "Total Cost": 820.00,
+              "Plan Rows": 2500,
+              "Actual Rows": 2500,
+              "Actual Total Time": 8.10
+            }
+          ]
+        }
+      ]
+    }
+  }
+]
