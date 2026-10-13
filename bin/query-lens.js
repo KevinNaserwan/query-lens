@@ -3,9 +3,9 @@
 
 const fs = require('fs');
 const path = require('path');
-const { normalizePlan } = require('../lib/plan-normalizer');
-const { Advisor } = require('../lib/advisor');
-const { renderCliTree, generateHtmlReport } = require('../lib/renderer');
+const { normalizePlan } = require('../dist/plan-normalizer');
+const { Advisor } = require('../dist/advisor');
+const { renderCliTree, generateHtmlReport } = require('../dist/renderer');
 
 function printUsage() {
   console.error(`

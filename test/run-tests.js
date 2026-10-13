@@ -1,9 +1,9 @@
 'use strict';
 
 const assert = require('assert');
-const { normalizePlan } = require('../lib/plan-normalizer');
-const { Advisor } = require('../lib/advisor');
-const { renderCliTree, generateHtmlReport } = require('../lib/renderer');
+const { normalizePlan } = require('../dist/plan-normalizer');
+const { Advisor } = require('../dist/advisor');
+const { renderCliTree, generateHtmlReport } = require('../dist/renderer');
 
 console.log('Running query-lens Test Suite...');
 

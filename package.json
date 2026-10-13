@@ -2,12 +2,14 @@
   "name": "query-lens",
   "version": "1.0.0",
   "description": "Zero-dependency SQL Execution Plan Analyzer, Visual Tree Heatmap & Automated Index Heuristic Advisor",
-  "main": "lib/index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "bin": {
     "query-lens": "./bin/query-lens.js"
   },
   "scripts": {
-    "test": "node test/run-tests.js",
+    "build": "tsc",
+    "test": "tsc && node test/run-tests.js",
     "demo": "node bin/query-lens.js examples/postgres-slow-query.json"
   },
   "keywords": [
